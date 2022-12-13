@@ -1,6 +1,8 @@
-#include <Windows.h>
-#include <stdio.h>
-#include "scene.h"
+#include <iostream>
+#include "student.h"
+using namespace std;
+
+int Student::studentCount;
 
 int main() {
 #pragma region 3-1-1
@@ -29,6 +31,22 @@ int main() {
 	//SampleClass a(114);
 
 	//SampleClass b = a;
+#pragma endregion
+
+#pragma region 3-2
+	Student* student1 = new Student;
+	Student* student2 = new Student;
+	Student* student3 = new Student;
+
+	cout << Student::studentCount << endl;
+
+	delete student1;
+
+	cout << Student::studentCount << endl;
+	delete student2;
+	delete student3;
+	cout << Student::studentCount << endl;
+
 #pragma endregion
 
 	return 0;
