@@ -1,13 +1,13 @@
-#include "test.h"
-#include "human.h"
-#include "SampleClass.h"
+#include <Windows.h>
+#include <stdio.h>
+#include "scene.h"
 
 int main() {
 #pragma region 3-1-1
-	// インスタンスを取得する
-	TestSingleton* testSingleton = TestSingleton::GetInstance();
-	// 使用
-	testSingleton->memberFunc();
+	//// インスタンスを取得する
+	//TestSingleton* testSingleton = TestSingleton::GetInstance();
+	//// 使用
+	//testSingleton->memberFunc();
 #pragma endregion
 
 #pragma region 3-1-2
@@ -30,5 +30,6 @@ int main() {
 
 	//SampleClass b = a;
 #pragma endregion
+
 	return 0;
 }
