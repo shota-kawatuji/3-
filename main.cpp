@@ -1,32 +1,33 @@
-#include <vector>
-#include <stdio.h>
+ï»¿#include <vector>
+#include <string>
+#include <iostream>
 #include "Enemy.h"
 
 using namespace std;
 
 int main() {
 #pragma region 3-1-1
-	//// ƒCƒ“ƒXƒ^ƒ“ƒX‚ğæ“¾‚·‚é
+	//// ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’å–å¾—ã™ã‚‹
 	//TestSingleton* testSingleton = TestSingleton::GetInstance();
-	//// g—p
+	//// ä½¿ç”¨
 	//testSingleton->memberFunc();
 #pragma endregion
 
 #pragma region 3-1-2
-	//Human* human1 = new Human("ƒhƒ‰‚¦‚à‚ñ\n");
+	//Human* human1 = new Human("ãƒ‰ãƒ©ãˆã‚‚ã‚“\n");
 	//Human* human2 = new Human(*human1);
 
-	//Human human1 = Human("ƒhƒ‰‚¦‚à‚ñ\n");
+	//Human human1 = Human("ãƒ‰ãƒ©ãˆã‚‚ã‚“\n");
 	//Human human2 = human1;
 #pragma endregion
 
 #pragma region 3-1-3
-	//Human human1 = Human("ƒhƒ‰‚¦‚à‚ñ\n");
-	//Human human2 = Human("‚Ì‚Ñ‘¾\n");
+	//Human human1 = Human("ãƒ‰ãƒ©ãˆã‚‚ã‚“\n");
+	//Human human2 = Human("ã®ã³å¤ª\n");
 	//Human human3 = human1;
 
 	//human2 = human1;
-	//// human2‚Íƒhƒ‰‚¦‚à‚ñ
+	//// human2ã¯ãƒ‰ãƒ©ãˆã‚‚ã‚“
 
 	//SampleClass a(114);
 
@@ -49,43 +50,70 @@ int main() {
 
 #pragma endregion
 
-#pragma region 3-2Šm”F‰Û‘è
-	vector<Enemy> enemies =
-	{ Enemy(),Enemy(),Enemy(),Enemy(),Enemy() };
+#pragma region 3-2ç¢ºèªèª²é¡Œ
+	//vector<Enemy> enemies =
+	//{ Enemy(),Enemy(),Enemy(),Enemy(),Enemy() };
 
-	while (true)
-	{
-		for (int i = 0; i < enemies.size(); i++)
-		{
-			enemies[i].Update();
+	//while (true)
+	//{
+	//	for (int i = 0; i < enemies.size(); i++)
+	//	{
+	//		enemies[i].Update();
+	//	}
+
+	//	printf("æ•µä¸€è¦§\n{\n");
+	//	for (int i = 0; i < enemies.size(); i++)
+	//	{
+	//		if (!enemies[i].GetDeleteFlag())
+	//		{
+	//			printf(" æ•µ%d\n", i);
+	//		}
+	//	}
+	//	printf("}\n\n");
+
+	//	printf("å€’ã—ãŸã„æ•µã®ç•ªå·ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„\n");
+
+	//	int target = 0;
+	//	scanf_s("%d", &target);
+
+	//	if (target >= 0 && target < enemies.size())
+	//	{
+	//		enemies[target].Defeat();
+	//		printf("\næ•µ%dã‚’å€’ã—ã¾ã—ãŸ\n\n", target);
+	//	}
+	//	else
+	//	{
+	//		printf("\næ•µ%dãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸ\n\n", target);
+	//	}
+	//}
+#pragma endregion
+
+#pragma region 3-3
+	vector<Enemy> enemies = { Enemy() };
+
+	while (true) {
+		for (int i = 0; i < enemies.size(); i++) {
+			if (!enemies[i].GetDeleteFlag()) {
+				enemies[i].Update();
+			}
 		}
 
-		printf("“Gˆê——\n{\n");
-		for (int i = 0; i < enemies.size(); i++)
-		{
-			if (!enemies[i].GetDeleteFlag())
-			{
-				printf(" “G%d\n", i);
+		printf("â€œæ•µä¸€è¦§\n{\n");
+		for (int i = 0; i < enemies.size(); i++) {
+			if (!enemies[i].GetDeleteFlag()) {
+				printf(" â€œæ•µ%d\n", i);
 			}
 		}
 		printf("}\n\n");
 
-		printf("“|‚µ‚½‚¢“G‚Ì”Ô†‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
-
-		int target = 0;
-		scanf_s("%d", &target);
-
-		if (target >= 0 && target < enemies.size())
-		{
-			enemies[target].Defeat();
-			printf("\n“G%d‚ğ“|‚µ‚Ü‚µ‚½\n\n", target);
-		}
-		else
-		{
-			printf("\n“G%d‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½\n\n", target);
-		}
+		string getSelect;
+		printf("[ENTER] : æ¬¡ã®ãƒ•ã‚§ãƒ¼ã‚º\n");
+		cin.clear();
+		getline(cin, getSelect);
 	}
+
 #pragma endregion
+
 
 	return 0;
 }

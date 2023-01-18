@@ -1,21 +1,13 @@
 #pragma once
 class SampleClass
 {
-private:
-	int num;
-
 public:
-	// コンストラクタ　今回は.h内で定義
-	SampleClass(int x = 0) { num = x; }
+	// 自作メンバ関数
+	void Func1();
+	void Func2();
 
-	// コピーコンストラクタ　今回は.h内で定義
-	SampleClass(const SampleClass& obj) {
-		num = obj.num;
-	}
-
-	// 代入演算子のオーバーロード　今回は.hで定義(本来は.cppへ)
-	SampleClass& operator=(const SampleClass& obj) {
-		num = obj.num;
-		return *this;
-	}
+private:
+	// メンバ関数ポインタのテーブル
+	static void(SampleClass::*pFuncTable[])();
+	
 };
