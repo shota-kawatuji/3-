@@ -89,31 +89,33 @@ int main() {
 #pragma endregion
 
 #pragma region 3-3
-	vector<Enemy> enemies = { Enemy() };
+	//vector<Enemy> enemies = { Enemy() };
 
-	while (true) {
-		for (int i = 0; i < enemies.size(); i++) {
-			if (!enemies[i].GetDeleteFlag()) {
-				enemies[i].Update();
-			}
-		}
+	//while (true) {
+	//	for (int i = 0; i < enemies.size(); i++) {
+	//		if (!enemies[i].GetDeleteFlag()) {
+	//			enemies[i].Update();
+	//		}
+	//	}
 
-		printf("“敵一覧\n{\n");
-		for (int i = 0; i < enemies.size(); i++) {
-			if (!enemies[i].GetDeleteFlag()) {
-				printf(" “敵%d\n", i);
-			}
-		}
-		printf("}\n\n");
+	//	printf("“敵一覧\n{\n");
+	//	for (int i = 0; i < enemies.size(); i++) {
+	//		if (!enemies[i].GetDeleteFlag()) {
+	//			printf(" “敵%d\n", i);
+	//		}
+	//	}
+	//	printf("}\n\n");
 
-		string getSelect;
-		printf("[ENTER] : 次のフェーズ\n");
-		cin.clear();
-		getline(cin, getSelect);
-	}
-
+	//	string getSelect;
+	//	printf("[ENTER] : 次のフェーズ\n");
+	//	cin.clear();
+	//	getline(cin, getSelect);
+	//}
 #pragma endregion
 
+#pragma region 3-6
+	
+#pragma endregion
 
 	return 0;
 }
