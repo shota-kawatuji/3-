@@ -127,16 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="human.cpp" />
     <ClCompile Include="IShape.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="human.h" />
     <ClInclude Include="IShape.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="SampleClass.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="test.h" />

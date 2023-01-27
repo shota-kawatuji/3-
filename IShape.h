@@ -3,5 +3,6 @@
 class IShape
 {
 public:// ƒƒ“ƒoŠÖ”
-	virtual void Draw() = 0;
+	virtual void size() = 0;
+	virtual void draw() = 0;
 };
