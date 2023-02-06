@@ -4,8 +4,8 @@
 class Circle : public IShape
 {
 public:
-	void size();
-	void draw();
+	void size() override;
+	void draw() override;
 
 private:
 	int r = 10;

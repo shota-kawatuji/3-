@@ -4,8 +4,8 @@
 class Rectangle : public IShape
 {
 public:
-	void size();
-	void draw();
+	void size() override;
+	void draw() override;
 
 private:
 	int x = 5;
